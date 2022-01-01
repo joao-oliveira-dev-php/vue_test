@@ -1,0 +1,14 @@
+version: '3'
+
+
+services:
+  npm:
+    image: node:13.7
+    container_name: npm_test
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 3000:3000
+      - 3001:3001
+    working_dir: /var/www/html
+    entrypoint: ['npm']
